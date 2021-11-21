@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="ctrl1">
+      <h1>我的笔记</h1>
+      <textarea type="text" ng-model="content"> </textarea>
+      <div>
+        <button ng-click="Function.saveContent()">保存</button>
+        <button ng-click="Function.fetchContent()">读取</button>
+        <button ng-click="Function.contentDel()">删除</button>
+      </div>
+      <p>剩余字数：{{Function.getNumber()}}</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

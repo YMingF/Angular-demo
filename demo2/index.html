@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="ctrl2">
+      <h1>我的备忘录</h1>
+      <label>
+        <input type="text" ng-model="newTodo">
+        <button ng-click="add()">新增</button>
+      </label>
+      <div>
+        <label ng-repeat="todo in todos">
+          <input type="checkbox" ng-model='todo.isChecked'/>
+          {{todo.name}}
+          <br>
+        </label>
+      </div>
+      <button ng-click="contentDel()">删除选中的记录</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
